@@ -1,11 +1,12 @@
 export class FakeLLM {
-    private reply = ''
+  private reply = ''
 
-    setReply(text: string) : void {
-        this.reply = text
-    }
+  setReply(text: string): void {
+    this.reply = text
+  }
 
-    async complete(prompt: string ) : Promise<string> {
-        return this.reply
-    }
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  async complete(prompt: string): Promise<string> {
+    return this.reply
+  }
 }
