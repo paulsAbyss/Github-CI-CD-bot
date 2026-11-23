@@ -6,7 +6,7 @@ describe('FakeLLM', () => {
     const llm = new FakeLLM()
     llm.setReply('hello')
 
-    const result = await llm.complete('any prompt')
+    const result = await llm.complete('system prompt', 'user prompt')
 
     expect(result).toBe('hello')
   })
@@ -15,7 +15,7 @@ describe('FakeLLM', () => {
     const llm = new FakeLLM()
     llm.setReply('goodbye')
 
-    const result = await llm.complete('any prompt')
+    const result = await llm.complete('system prompt', 'user prompt')
 
     expect(result).toBe('goodbye')
   })
