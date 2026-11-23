@@ -1,4 +1,6 @@
-export class FakeLLM {
+import type { LLMClient } from './reviewer.js'
+
+export class FakeLLM implements LLMClient {
   private reply = ''
 
   setReply(text: string): void {
@@ -6,7 +8,7 @@ export class FakeLLM {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  async complete(prompt: string): Promise<string> {
+  async complete(systemPrompt: string, userPrompt: string): Promise<string> {
     return this.reply
   }
 }
