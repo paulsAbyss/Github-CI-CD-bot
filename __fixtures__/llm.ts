@@ -1,4 +1,4 @@
-import type { LLMClient } from './reviewer.js'
+import type { LLMClient } from '../src/llm/reviewer.js'
 
 export class FakeLLM implements LLMClient {
   private reply = ''
